@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaze</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/blaze-top.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span class="material-icons menu-icon" onclick="toggleMenu()">menu</span>
+        <div class="title">Blaze</div>
+        <span class="material-icons edit-icon">edit</span>
+    </header>
+    <nav id="sidebar">
+        <span class="material-icons close-icon" onclick="toggleMenu()">close</span>
+        <ul>
+            <h1>Other Projects</h1>
+            <li><a href="progress-clock/clock.html">Progress Clock</a></li>
+            <li><a href="portfolio/portfolio.html">Portfolio</a></li>
+            <li><a href="snake-game/snake.html">Snake Game</a></li>
+            <li><a href="head/head.html">Head</a></li>
+        </ul>
+        <div class="section-title">Today</div>
+        <ul>
+            <li><a href="#">working</a></li>
+        </ul>
+        <div class="footer">
+            <a href="#">Upgrade plan</a>
+        </div>
+    </nav>
+    <main>
+        <div id="logo-container" class="centered">
+            <img id="chatgpt-logo" src="images/blaze-top.png" alt="blaze Logo">
+        </div>
+        <div id="quick-actions" class="quick-actions">
+            <button class="quick-action" onclick="sendQuickAction('What skills do I need for a career in AI?')">
+                <img src="https://img.icons8.com/?size=100&id=jQhWk5R601OC&format=png&color=000000" alt="Icon"> What skills do I need for a career in AI?
+            </button>
+            <button class="quick-action" onclick="sendQuickAction('Create a workout plan')">
+                <img src="https://img.icons8.com/?size=100&id=3WDvk5erYApg&format=png&color=000000" alt="Icon"> Create a workout plan?
+            </button>
+        </div>
+        <div id="messages" class="messages">
+            <!-- Chat messages will be displayed here -->
+        </div>
+    </main>
+    <footer>
+        <div class="input-container">
+            <span class="material-icons attachment-icon">attach_file</span>
+            <input type="text" id="messageInput" placeholder="Message Blaze" oninput="toggleSendButton()">
+            <button id="sendButton" disabled onclick="sendMessage()">
+                 <img id="sendIcon" src="https://img.icons8.com/?size=100&id=124436&format=png&color=000000" alt="send">
+            </button>
+        </div>
+        <div class="footer-text">Blaze can make mistakes. Check important info.</div>
+    </footer>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
